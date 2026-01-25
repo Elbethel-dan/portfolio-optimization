@@ -14,3 +14,31 @@ In this task, historical market data for BND, SPY, and TSLA are collected using 
 
 This task focuses on forecasting Tesla’s stock behavior using both classical and deep learning models. ARIMA/SARIMA models are applied to prices and returns after assessing stationarity and temporal structure, while an LSTM neural network is implemented to capture nonlinear patterns and long-term dependencies in the data. Models are trained using chronological splits and evaluated with MAE, RMSE, and MAPE. Performance comparisons highlight trade-offs between interpretability and predictive flexibility, reinforcing the role of forecasting models as decision-support tools rather than exact price predictors.
 
+---
+
+## ⚙️ Reproduce this environment
+
+To set up and reproduce this project locally, follow the steps below:
+
+## 1. Clone the repository
+```bash
+   git clone https://github.com/Elbethel-dan/solar-challenge-week0.git
+```
+## 2. Create and activate a virtual environment (recommended)
+
+   **For macOS / Linux**
+   ```bash
+     python3 -m venv week0
+     source week0/bin/activate
+   ```
+
+   **For Windows**
+   ```bash
+     python -m venv week0
+     week0\Scripts\activate
+   ```
+## 3. Install dependencies
+  ```bash
+     pip install -r requirements.txt
+ ```
+
