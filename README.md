@@ -15,6 +15,21 @@ In this task, historical market data for BND, SPY, and TSLA are collected using 
 This task focuses on forecasting Tesla’s stock behavior using both classical and deep learning models. ARIMA/SARIMA models are applied to prices and returns after assessing stationarity and temporal structure, while an LSTM neural network is implemented to capture nonlinear patterns and long-term dependencies in the data. Models are trained using chronological splits and evaluated with MAE, RMSE, and MAPE. Performance comparisons highlight trade-offs between interpretability and predictive flexibility, reinforcing the role of forecasting models as decision-support tools rather than exact price predictors.
 
 ---
+## 🔮 Task 3: Forecast Future Market Trends
+
+Building on the best-performing model from Task 2, this task generates 12-month forward-looking forecasts for Tesla's stock price with quantified uncertainty bounds. The ARIMA model trained on returns data produces future price projections with 95% confidence intervals, revealing a flat-to-slightly-negative trend with high volatility. Visualizations distinguish between historical data, test predictions, and future forecasts, while trend analysis examines how uncertainty widens over longer horizons following a √t pattern. The analysis translates forecasts into market opportunities and risks, providing actionable insights for portfolio positioning and risk management strategies.
+
+---
+## ⚖️ Task 4: Portfolio Optimization Based on Forecast
+This task applies Modern Portfolio Theory (MPT) to construct an optimal asset allocation using the Tesla forecast as a specific "view" while incorporating historical data for SPY and BND. The expected returns vector combines forecasted Tesla returns with historical averages for SPY and BND, while the covariance matrix captures historical relationships. The efficient frontier is generated through simulation, identifying the Maximum Sharpe Ratio and Minimum Volatility portfolios. Visualization includes the efficient frontier plot, covariance matrix heatmaps, and portfolio weight comparisons, culminating in a recommended portfolio allocation with justification based on risk-adjusted return optimization.
+
+---
+
+## 📉 Task 5: Strategy Backtesting
+The final task validates the optimized portfolio strategy through historical simulation on the 2025-2026 test period. The strategy portfolio (using weights from Task 4) is compared against a 60/40 SPY/BND benchmark portfolio, testing both buy-and-hold and monthly rebalancing approaches. Performance metrics including total return, annualized return, Sharpe ratio, and maximum drawdown are calculated for comparison. Comprehensive visualizations show cumulative returns, drawdowns, and rolling performance metrics, while statistical tests assess significance of outperformance. The backtest concludes with a viability assessment of the model-driven approach and discussion of implementation limitations.
+
+---
+
 
 ## ⚙️ Reproduce this environment
 
@@ -42,3 +57,28 @@ To set up and reproduce this project locally, follow the steps below:
      pip install -r requirements.txt
  ```
 
+--- 
+
+## 📈 Key Insights
+
+- Tesla Forecast: Flat expected return with high volatility (3.6% daily)
+
+- Portfolio Optimization: Balanced allocation reduces volatility by ~70% vs TSLA alone
+
+- Backtest Results: Model-driven strategy shows moderate viability vs 60/40 benchmark
+
+- Practical Application: Forecasting serves as decision-support, not exact prediction
+
+--- 
+
+## 🛠️ Technologies Used
+
+- Data Analysis: Pandas, NumPy, SciPy
+
+- Visualization: Matplotlib, Seaborn, Plotly
+
+- Time Series Forecasting: Statsmodels, pmdarima
+
+- Portfolio Optimization: CVXPY, PyPortfolioOpt
+
+- Deep Learning: TensorFlow/Keras (LSTM)
